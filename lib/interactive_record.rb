@@ -3,7 +3,7 @@ require 'active_support/inflector'
 
 class InteractiveRecord
 
-  self.create_attributes
+  
   
   def self.table_name
     self.to_s.downcase.pluralize
@@ -60,5 +60,7 @@ class InteractiveRecord
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
     DB[:conn].execute(sql)
   end
+
+  self.create_attributes
 
 end
