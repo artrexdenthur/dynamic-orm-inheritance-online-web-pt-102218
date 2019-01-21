@@ -9,7 +9,8 @@ class InteractiveRecord
 
   def self.create_attributes
     column_names.each do |col_name|
-    attr_accessor col_name.to_sym
+      attr_accessor col_name.to_sym
+    end
   end
 
   def self.column_names
